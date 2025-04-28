@@ -59,10 +59,13 @@ This will:
 
 ### Automated Build Process
 
-This project uses GitHub Actions for automated builds:
+This project uses GitHub Actions for CI/CD:
 
-1. **Version Bump**: Automatically increments the patch version on every push to the main branch
-2. **Release**: Publishes the package to npm when a new version tag is pushed
+The **CI/CD Pipeline** automatically performs the following steps on every push to the main branch:
+1. Builds the project
+2. Increments the patch version
+3. Creates a new GitHub release
+4. Publishes the package to npm
 
 ## License
 
