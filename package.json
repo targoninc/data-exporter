@@ -1,0 +1,22 @@
+{
+  "name": "data-exporter",
+  "type": "module",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/targoninc/data-exporter.git"
+  },
+  "scripts": {
+    "build": ""
+  },
+  "dependencies": {
+    "ts-spreadsheets": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-plugin-dtsx": "^0.21.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
