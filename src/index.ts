@@ -17,8 +17,13 @@ function getExportType(fileName: string) {
     return extension as ExportType;
 }
 
-export async function exportToFile(data: Array<any> | Object, fileName: string) {
-    const exportType = getExportType(fileName);
+/**
+ * Converts and exports the data in a variety of formats
+ * @param data Can be any array or object
+ * @param target Can be a file path (e.g. when you're using bun or node) or an ExportType if you just need the content of the export result
+ */
+export async function exportToFile(data: Array<any> | Object, target: string|ExportType) {
+    const exportType = getExportType(target);
     const func = exportFunctions[exportType];
-    await func(data, fileName);
+    return await func(data, target);
 }
